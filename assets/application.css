@@ -1,0 +1,360 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+body {
+    line-height: 1
+}
+ol,
+ul {
+    list-style: none
+}
+blockquote,
+q {
+    quotes: none
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    line-height: 1.4em;
+    font-size: 16px;
+    color: #33363b;
+    background: #cbd1d7 url("bg.png") repeat left top
+}
+a {
+    text-decoration: none;
+    color: #7b8392;
+    cursor: pointer
+}
+a:hover {
+    text-decoration: underline
+}
+h3 {
+    font-weight: bold;
+    color: #0a1772
+}
+input {
+    width: 300px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #99a3b3;
+    height: 50px;
+    line-height: 50px;
+    color: #7b8392;
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 16px;
+    padding-left: 62px
+}
+button {
+    width: 300px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    height: 50px;
+    line-height: 50px;
+    font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 16px;
+    color: #ffffff
+}
+::-webkit-input-placeholder {
+    color: #cacdd3;
+    text-transform: none !important
+}
+:-moz-placeholder {
+    color: #cacdd3;
+    text-transform: none !important
+}
+::-moz-placeholder {
+    color: #cacdd3;
+    text-transform: none !important
+}
+:-ms-input-placeholder {
+    color: #cacdd3;
+    text-transform: none !important
+}
+.inner {
+    width: 960px;
+    margin: auto
+}
+.error {
+    position: absolute;
+    color: #ffffff;
+    top: 0;
+    left: 345px;
+    z-index: 2;
+    overflow: visible
+}
+.error .connector {
+    position: absolute;
+    left: -7px;
+    top: 19px;
+    display: block
+}
+.error .message {
+    display: block;
+    white-space: nowrap;
+    background-color: #f05a76;
+    padding: 0 20px 0 20px;
+    height: 50px;
+    line-height: 50px
+}
+.branded {
+    background-color: #56555b
+}
+.hand {
+    cursor: pointer
+}
+.shadow {
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.07)
+}
+.fade.ng-hide-remove {
+    transition: 0.3s linear all;
+    opacity: 0
+}
+.fade.ng-hide-remove-active {
+    opacity: 1
+}
+.fade.ng-hide-add {
+    transition: 0.4s linear all;
+    opacity: 1
+}
+.fade.ng-hide-add-active {
+    opacity: 0
+}
+.slide-left-margin.ng-hide-remove {
+    transition: 0.3s linear all;
+    margin-left: 20px
+}
+.slide-left-margin.ng-hide-remove-active {
+    margin-left: 0
+}
+.slide-left-margin.ng-hide-add {
+    transition: 0.4s linear all;
+    margin-left: 0
+}
+.slide-left-margin.ng-hide-add-active {
+    margin-left: 20px
+}
+.holder {
+    display: table;
+    width: 100%;
+    height: 100%
+}
+.holder .middled {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle
+}
+.holder.main {
+    z-index: 1;
+    padding-bottom: 75px
+}
+.holder.main .block {
+    width: 360px;
+    margin: 0 auto 0 auto;
+    background-color: #ffffff;
+    text-align: center
+}
+.holder.main .block .logo {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dde1e7;
+    padding: 10px
+}
+.holder.main .block form {
+    padding-bottom: 30px
+}
+.holder.main .block form>div {
+    margin-top: 20px;
+    position: relative
+}
+.holder.main .block form input.email {
+    background: #fff url("icon-email.png") no-repeat 20px 17px
+}
+.holder.main .block form input.code {
+    text-transform: uppercase;
+    background: #fff url("icon-code.png") no-repeat 20px 15px
+}
+.holder.main .block .feedback-holder {
+    padding: 35px 25px 50px 25px
+}
+.holder.main .block .feedback-holder img {
+    margin-bottom: 25px
+}
+.holder.main .block .feedback-holder p {
+    margin-top: 10px
+}
+.strip {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    height: 60px;
+    background-color: #ffffff;
+    width: 100%
+}
+.strip>span {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    top: 0;
+    float: right;
+    margin-right: 20px
+}
+.strip>img {
+    float: right;
+    margin-right: 90px
+}
+.holder.overlay {
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-bottom: 75px;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+.holder.overlay .block {
+    width: 670px;
+    margin: 0 auto 0 auto;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: auto;
+    padding: 15px
+}
+.holder.overlay .block img.receipt {
+    float: left
+}
+.holder.overlay .block div {
+    float: right;
+    text-align: left;
+    width: 240px;
+    margin: 50px 15px 0 0
+}
+.holder.overlay .block div p {
+    margin-top: 20px
+}
+.holder.overlay .block img.close {
+    float: right
+}

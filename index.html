@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="app" id="ng-app">
+<head>
+  <title>Angular Test Form</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <link href="assets/application.css" media="all" rel="stylesheet" />
+  <script src="assets/application.js"></script>
+<meta content="CvwXGRglIH91B3R/FOdCN0gnOjGPInGIB3UC1/hAHYw=" name="csrf-token" />
+</head>
+<body style="overflow: {{showOverlay ? 'hidden' : 'auto'}};" ng-controller="MainCtrl">
+
+<!--content-->
+<div class="holder main">
+  <div class="middled">
+      <div class="block shadow">
+        <div class="logo">
+          <img src="client-logos/logo-fakeco.png" alt="logo" />
+        </div>
+
+        <form ng-cloak ng-show="!success" method="post" class="form fade" name="mainForm" novalidate>
+          <div>
+            <input ng-change="formChanged = true" ng-disabled="loading || showOverlay" ng-model="request.email" required type="email" name="email" class="email" placeholder="Email Address..." />
+            <div class="error shadow fade slide-left-margin" ng-show="(mainForm.$submitted || mainForm.email.$touched) && mainForm.email.$error.required">
+              <img src="assets/connector-error.png" class="connector" alt="connector" />
+              <div class="message">Please enter your email address</div>
+            </div>
+            <div class="error shadow fade slide-left-margin" ng-show="(mainForm.$submitted || mainForm.email.$touched) && mainForm.email.$error.email">
+              <img src="assets/connector-error.png" class="connector" alt="connector" />
+              <div class="message">Please enter a valid email address</div>
+            </div>
+          </div>
+          <div>
+            <input ng-change="formChanged = true" ng-pattern="/^[a-zA-Z0-9]+$/" ng-disabled="loading || showOverlay" ng-model="request.code" required type="text" name="code" class="code" placeholder="Transaction Code..." />
+            <div class="error shadow fade slide-left-margin" ng-show="(mainForm.$submitted || mainForm.code.$touched) && mainForm.code.$error.required">
+              <img src="assets/connector-error.png" class="connector" alt="connector" />
+              <div class="message">Please enter your transaction code</div>
+            </div>
+            <div class="error shadow fade slide-left-margin" ng-show="(mainForm.$submitted || mainForm.code.$touched) && mainForm.code.$error.pattern">
+              <img src="assets/connector-error.png" class="connector" alt="connector" />
+              <div class="message">Please enter letters and numbers only</div>
+            </div>
+          </div>
+          <div>
+            <button ng-disabled="loading || showOverlay" class="branded hand button" type="submit" ng-click="submit(request)">SEND</button>
+            <div class="error shadow fade slide-left-margin" ng-show="!formChanged && error">
+              <img src="assets/connector-error.png" class="connector" alt="connector" />
+              <div class="message">{{error}}</div>
+            </div>
+          </div>
+          <div>
+            <a href="#" ng-click="showOverlay = true">Where to find your code?</a>
+          </div>
+          <input name="authenticity_token" type="hidden" value="CvwXGRglIH91B3R/FOdCN0gnOjGPInGIB3UC1/hAHYw=" />
+        </form>
+        
+        <div ng-cloak ng-show="success" class="feedback-holder fade">
+          <img src="assets/tick.png" alt="Tick mark" />
+          <p>Success!! Your Digital Receipt has been resent.</p>
+          <p>Thank you for shopping with us!</p>
+        </div>
+      </div>
+  </div>
+</div>
+<!--overlay-->
+<div ng-cloak ng-show="showOverlay" class="holder overlay fade">
+  <div class="middled">
+      <div class="block shadow">
+        <img src="assets/receipt.png" class="receipt" alt="Example receipt showing transaction code" />
+        <img src="assets/close.png" class="hand close" alt="Close overlay" ng-click="showOverlay = false" />
+        <div>
+          <h3>Where to find your code?</h3>
+          <p>The code can be found on the proof of purchase slip you received upon completion of the transaction. The code to enter is the Transaction ID.</p>
+        </div>
+      </div>
+  </div>
+</div>
+  
+    <!--strip-->
+    <div class="strip">
+      <img src="assets/logo.png" alt="Company logo" />
+      <span>Powered by</span>
+    </div>
+</body>
+</html>
